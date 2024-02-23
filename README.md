@@ -55,6 +55,36 @@ Ensure you have Git installed and properly setup in your system's PATH to use th
     };
    ```
 
+## Featured Scoped Registries
+
+This tool includes predefined configurations for essential scoped registries like UnityNuGet, offering a diverse selection of packages, tools, SDKs, and libraries crucial for Unity development.
+
+<details>
+<summary><strong>UnityNuGet</strong></summary>
+
+UnityNuGet offers a bridge to NuGet packages, allowing Unity developers to easily integrate thousands of .NET libraries into their projects. It's particularly useful for projects that rely on advanced .NET features or external .NET libraries.
+
+**Registry Details**
+- **Name**: UnityNuGet
+- **URL**: `https://unitynuget-registry.azurewebsites.net`
+- **Scopes**: `org.nuget`
+
+</details>
+
+<details>
+<summary><strong>MetaXR</strong></summary>
+
+The MetaXR Scoped Registry is a must-have for developers working on VR and AR applications, especially those targeting Oculus devices. It provides access to Oculus SDKs and tools essential for VR development.
+
+**Registry Details**
+- **Name**: MetaXR
+- **URL**: `https://npm.developer.oculus.com`
+- **Scopes**: `com.meta.xr`
+
+</details>
+
+
+
 ## Contributing
 
 Contributions are welcome! If you've identified a bug, have an idea for improvement, or want to propose a new feature, feel free to open an issue or submit a pull request.
