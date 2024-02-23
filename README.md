@@ -31,6 +31,7 @@ Ensure you have Git installed and properly setup in your system's PATH to use th
     - **Remove Registry**: Select a registry and click the '-' button to remove the selected registry.
     - **Edit Registry**: Modify the name, URL, or scopes directly in the list.
     - **Enable/Disable Registries**: Toggle the checkbox next to each registry to enable or disable it as required.
+    - **Reorder Registries**: The order of the registries are reflected in the package manager (reorderable list feature)
 3. After configuring your scoped registries, click `Update Registries` to apply the changes to your `manifest.json` file.
 4. A dialog box will confirm the successful update of scoped registries.
 5. You can edit the default package list by modifying them from the editor script, here
