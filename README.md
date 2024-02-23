@@ -38,8 +38,15 @@ Ensure you have Git installed and properly setup in your system's PATH to use th
    ```cs
     /// <summary> A list of predefined scoped registries to add to the manifest.json file. </summary>
     private static readonly List<ScopedRegistry> predefinedRegistries = new List<ScopedRegistry>() {
-        new ("acegikmo", UpmUrl, "com.acegikmo"),
+        
+        // Author's registry
         new ("ltmx", UpmUrl, "com.ltmx"),
+        
+        // A curated list of Unity packages
+        new ("UnityNuGet", "https://unitynuget-registry.azurewebsites.net", "org.nuget"),
+        
+        // Other great creator's registries
+        new ("acegikmo", UpmUrl, "com.acegikmo"),
         new ("cysharp", UpmUrl, "com.cysharp"),
         new ("neuecc", UpmUrl, "com.neuecc"),
         new ("vrmc", UpmUrl, "com.vrmc"),
@@ -47,11 +54,11 @@ Ensure you have Git installed and properly setup in your system's PATH to use th
         new ("dbrizov", UpmUrl, "com.dbrizov"),
         new ("needle", UpmUrl, "com.needle"),
         new ("yasirkula", UpmUrl, "com.yasirkula"),
-        new ("Google", UpmUrl, "com.google"),
-
-        new ("MetaXR", "https://npm.developer.oculus.com", "com.meta.xr"),
-        new ("UnityNuGet", "https://unitynuget-registry.azurewebsites.net", "org.nuget"),
         new ("keijiro", "https://registry.npmjs.com", "jp.keijiro"),
+        
+        // Company registries
+        new ("Google", UpmUrl, "com.google"), // h
+        new ("MetaXR", "https://npm.developer.oculus.com", "com.meta.xr"),
     };
    ```
 
