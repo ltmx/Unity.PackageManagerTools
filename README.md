@@ -33,6 +33,27 @@ Ensure you have Git installed and properly setup in your system's PATH to use th
     - **Enable/Disable Registries**: Toggle the checkbox next to each registry to enable or disable it as required.
 3. After configuring your scoped registries, click `Update Registries` to apply the changes to your `manifest.json` file.
 4. A dialog box will confirm the successful update of scoped registries.
+5. You can edit the default package list by modifying them from the editor script, here
+   
+   ```cs
+    /// <summary> A list of predefined scoped registries to add to the manifest.json file. </summary>
+    private static readonly List<ScopedRegistry> predefinedRegistries = new List<ScopedRegistry>() {
+        new ("acegikmo", UpmUrl, "com.acegikmo"),
+        new ("ltmx", UpmUrl, "com.ltmx"),
+        new ("cysharp", UpmUrl, "com.cysharp"),
+        new ("neuecc", UpmUrl, "com.neuecc"),
+        new ("vrmc", UpmUrl, "com.vrmc"),
+        new ("alelievr", UpmUrl, "com.alelievr"),
+        new ("dbrizov", UpmUrl, "com.dbrizov"),
+        new ("needle", UpmUrl, "com.needle"),
+        new ("yasirkula", UpmUrl, "com.yasirkula"),
+        new ("Google", UpmUrl, "com.google"),
+
+        new ("MetaXR", "https://npm.developer.oculus.com", "com.meta.xr"),
+        new ("UnityNuGet", "https://unitynuget-registry.azurewebsites.net", "org.nuget"),
+        new ("keijiro", "https://registry.npmjs.com", "jp.keijiro"),
+    };
+   ```
 
 ## Contributing
 
