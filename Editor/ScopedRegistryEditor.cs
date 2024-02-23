@@ -36,9 +36,20 @@ public class ScopedRegistryEditor : EditorWindow
         new ("keijiro", "https://registry.npmjs.com", "jp.keijiro"),
         
         // Company registries
-        new ("Google", UpmUrl, "com.google"), // h
+        new ("Unity", UpmUrl, new [] {
+            "com.unity.selection-groups", 
+            "com.unity.demoteam",
+            "com.unity.hlod",
+            "com.unity.material-switch",
+            // "com.unity.cluster-display",
+            "com.unity.vfx-toolbox",
+
+        }),
+        new ("Google", UpmUrl, "com.google"),
         new ("MetaXR", "https://npm.developer.oculus.com", "com.meta.xr"),
     };
+    
+    // Todo : Add hidden unity packages such as : "com.unity.nuget.newtonsoft-json", "com.unity.cluster-display"
 
     [MenuItem("Tools/Scoped Registry Editor")]
     public static void ShowWindow() => GetWindow<ScopedRegistryEditor>("Scoped Registry Editor").Show();
