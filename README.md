@@ -1,7 +1,7 @@
 
 ![Scoped Registry Editor Effect](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
 
-# Unity Package Registry Tools
+# Unity Package Manager Tools
 
 Enhance your Unity editor experience with the Unity Package Registry Tools, a versatile editor tool designed to seamlessly manage scoped registries in your Unity projects. This powerful editor extension lets you easily add, remove, and manage scoped registries directly from the Unity Editor, providing a streamlined workflow for handling package sources in your `manifest.json` file.
 
