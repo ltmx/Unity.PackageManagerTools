@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
@@ -35,6 +36,7 @@ public class ScopedRegistryEditor : EditorWindow
         new ("yasirkula", UpmUrl, "com.yasirkula"),
         new ("keijiro", "https://registry.npmjs.com", "jp.keijiro"),
         new ("NatML", "https://registry.npmjs.com", new [] { "ai.natml", "ai.fxn" }),
+        new ("Roy Theunissen", UpmUrl, "com.roytheunissen"),
         
         
         // Company registries
@@ -68,7 +70,12 @@ public class ScopedRegistryEditor : EditorWindow
         return new ReorderableList(scopedRegistries, typeof(ScopedRegistry), true, true, true, true) {
             drawHeaderCallback = rect => EditorGUI.LabelField(rect, "Scoped Registries"),
             drawElementCallback = (rect, index, isActive, isFocused) => { ScopedRegistryEditorHelper.DrawRegistryElement(scopedRegistries, rect, index); },
-            onAddCallback = list => { scopedRegistries.Add(new ScopedRegistry("New Registry", UpmUrl, new string[] { })); },
+            onAddCallback = list =>
+            {
+                scopedRegistries.Add(new ScopedRegistry("New Registry", UpmUrl, "", true));
+                // Select the new element
+                reorderableList.Select(scopedRegistries.Count -1);
+            },
             onRemoveCallback = list => { scopedRegistries.RemoveAt(list.index); }
         };
     }
