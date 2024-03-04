@@ -8,8 +8,15 @@ using UnityEngine.UIElements;
 
 namespace UIMarkdownRenderer.ObjectRenderers
 {
+    
+    
     public class LinkInlineRenderer : MarkdownObjectRenderer<UIMarkdownRenderer, LinkInline>
     {
+        private static string BetterCombinePaths(string basePath, string relativePath) =>
+            Path.Combine(basePath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar), 
+                relativePath.TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+        
+
         protected override void Write(UIMarkdownRenderer renderer, LinkInline obj)
         {
             string link = obj.GetDynamicUrl != null ? obj.GetDynamicUrl() ?? obj.Url : obj.Url;
@@ -25,7 +32,8 @@ namespace UIMarkdownRenderer.ObjectRenderers
                 link = UIMarkdownRenderer.ResolveLink(link);
 
                 if (!link.StartsWith("http"))
-                    link = "file://" + Path.Combine(renderer.FileFolder, link); 
+                    // link = "file://" + Path.Combine(renderer.FileFolder, link); 
+                    link = Path.Combine(renderer.FileFolder, link); 
 
                 var uwr = new UnityWebRequest(link, UnityWebRequest.kHttpVerbGET);
                 // Avoid 403 errors, but does not seem to work on some websites still
@@ -47,37 +55,34 @@ namespace UIMarkdownRenderer.ObjectRenderers
 
                 uwr.downloadHandler = new DownloadHandlerTexture();
                 
-                
-                
                 var asyncOp = uwr.SendWebRequest();
 
                 asyncOp.completed += _ =>
                 {
-                    try
+
+                    if (link.StartsWith("http"))
                     {
                         imgElem.image = DownloadHandlerTexture.GetContent(uwr);
-
-                        if (imgElem.image == null)
-                        {
-                            // All this is just to prevent empty images from being added to the hierarchy
-                            var parent = imgElem.parent;
-                            var previous = imgElem.parent.ElementAt(imgElem.parent.IndexOf(imgElem) - 1);
-                            parent.Remove(imgElem);
-                            parent.Remove(previous);
-                        }
-                        else
-                        {
-                            imgElem.Fit();
-                            imgElem.RegisterCallback<GeometryChangedEvent>( _ => imgElem.Fit());
-                        }
                     }
-                    catch (System.Exception x)
+                    else  {
+                        var tex = new Texture2D(2, 2);
+                        var pth = BetterCombinePaths(renderer.FileFolder, link);
+                        tex.LoadImage(File.ReadAllBytes(pth));
+                        imgElem.image = tex;
+                    }
+
+                    if (imgElem.image == null)
                     {
-                        if (!x.Message.StartsWith("HTTP/1.1 404"))
-                            Debug.LogWarning($"{x.Message}: {link}");
-                            // throw;
-                        
-                        Debug.LogWarning($"{x.Message}: {link}");
+                        // All this is just to prevent empty images from being added to the hierarchy
+                        var parent = imgElem.parent;
+                        var previous = imgElem.parent.ElementAt(imgElem.parent.IndexOf(imgElem) - 1);
+                        parent.Remove(imgElem);
+                        parent.Remove(previous);
+                    }
+                    else
+                    {
+                        imgElem.Fit();
+                        imgElem.RegisterCallback<GeometryChangedEvent>( _ => imgElem.Fit());
                     }
                     uwr.Dispose();
                 };
@@ -85,3 +90,4 @@ namespace UIMarkdownRenderer.ObjectRenderers
         }
     }
 }
+
