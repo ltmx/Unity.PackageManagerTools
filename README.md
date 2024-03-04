@@ -1,5 +1,5 @@
 
-![Scoped Registry Editor Effect](https://github.com/ltmx/Unity.PackageRegistryTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
+![Scoped Registry Editor Effect](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
 
 # Unity Package Registry Tools
 
