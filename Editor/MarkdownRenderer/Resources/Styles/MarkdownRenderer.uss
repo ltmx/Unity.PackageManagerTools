@@ -1,0 +1,92 @@
+VisualElement {
+    
+}
+
+.mainBody {
+    margin: 2px;
+}
+
+.header {
+
+}
+
+.block {
+    /*margin-top: 8px;*/
+    /*margin-bottom: 8px;*/
+    flex-wrap: wrap;
+}
+
+.line {
+    height: 2px;
+    border-width: 1px;
+    border-color: var(--unity-colors-label-text);
+}
+
+.codeblock {
+    margin: 8px;
+    border-color: #3b3b3b;
+    border-width: 1px;
+    border-radius: 12px;
+    background-color: #181818;
+    padding: 5px;
+}
+
+.quote {
+    margin-left: 4px;
+    padding-left: 4px;
+    border-left-width: 4px;
+    border-left-color: rgba(255, 223, 65, 0.58);
+    background-color: var(--unity-colors-box-background);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.codeblock Label {
+    -unity-font: resource("Fonts/RobotoMono/RobotoMono-Regular.ttf");
+    -unity-font-definition : resource("Fonts/RobotoMono/RobotoMono-Regular SDF.asset");
+    white-space: normal;
+    color: #b9b9b9;
+}
+
+.list {
+    white-space: normal;
+    /*-unity-paragraph-spacing: 100px;*/
+    border-color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 6px;
+}
+
+.linkHovered {
+    cursor: link;
+}
+
+.h1 {
+    font-size: 200%;
+    -unity-font-style: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.h2 {
+    font-size: 150%;
+    -unity-font-style: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.h3 {
+    font-size: 120%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(255, 255, 255, 0.26);
+}
+
+.paragraph {
+    white-space: normal;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.md-image {
+    width: 100%;
+}

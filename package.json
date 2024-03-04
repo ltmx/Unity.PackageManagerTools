@@ -10,10 +10,20 @@
   "version": "1.0.0",
   "unity": "2021.3",
   "dependencies": {
-    "com.unity.nuget.newtonsoft-json" : "2.0.0"
+    "com.unity.nuget.newtonsoft-json": "2.0.0",
+    "com.unity.ugui": "1.0.0"
   },
   "keywords": [
-    "unity", "package", "registry", "scoped", "scope", "package manager", "manager", "editor", "extension", "upm"
+    "unity",
+    "package",
+    "registry",
+    "scoped",
+    "scope",
+    "package manager",
+    "manager",
+    "editor",
+    "extension",
+    "upm"
   ],
   "repository": {
     "url": "https://github.com/ltmx/Unity.PackageRegistryTools.git",

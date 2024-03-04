@@ -1,0 +1,18 @@
+{
+    "name": "MarkdownRenderer.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:08e4feaaff2710f49b21be6f0ba1c420"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
