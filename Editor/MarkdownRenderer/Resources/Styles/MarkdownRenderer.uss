@@ -64,6 +64,7 @@ VisualElement {
     -unity-font-style: bold;
     margin-top: 8px;
     margin-bottom: 8px;
+    white-space: normal;
 }
 
 .h2 {
@@ -71,6 +72,7 @@ VisualElement {
     -unity-font-style: bold;
     margin-top: 8px;
     margin-bottom: 8px;
+    white-space: normal;
 }
 
 .h3 {
@@ -79,6 +81,7 @@ VisualElement {
     margin-bottom: 8px;
     border-bottom-width: 2px;
     border-bottom-color: rgba(255, 255, 255, 0.26);
+    white-space: normal;
 }
 
 .paragraph {
