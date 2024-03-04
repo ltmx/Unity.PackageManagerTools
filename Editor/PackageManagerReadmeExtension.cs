@@ -35,14 +35,14 @@ internal class PackageManagerReadmeExtension : IPackageManagerExtension
         if (rootVisualElementProperty.GetValue(packageManagerWindow) is not VisualElement rootVisualElement) return;
 
         detailContainer = rootVisualElement.Query<TextElement>("detailDescription").First(); // this one is a text element
+        
         if (detailContainer == null) return;
-
-
+        if (packageInfo == null) return;
+        if (string.IsNullOrEmpty(packageInfo.resolvedPath)) return;
+        
         detailContainer.Clear();
         detailContainer.text = "";
-
-        if (packageInfo == null) return;
-
+        
         var files = Directory.EnumerateFiles(packageInfo.resolvedPath, "*.md", SearchOption.AllDirectories).ToArray();
         var file = files.FirstOrDefault(f => Path.GetFileName(f) is "README.md" or "index.md");
         if (string.IsNullOrEmpty(file)) file = files.FirstOrDefault();
