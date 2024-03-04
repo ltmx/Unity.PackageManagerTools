@@ -1,7 +1,16 @@
+# Unity Package Manager Tools
 
 ![Scoped Registry Editor Effect](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
 
-# Unity Package Manager Tools
+![GitHub package.json version](https://img.shields.io/github/package-json/v/LTMX/Unity.PackageManagerTools?color=blueviolet&style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/LTMX/Unity.PackageManagerTools?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/LTMX/Unity.PackageManagerTools?color=success&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/LTMX/Unity.PackageManagerTools?style=for-the-badge)
+[![Made for Unity](https://img.shields.io/badge/Made%20for-Unity-57b9d3.svg?style=for-the-badge&logo=unity&color=blueviolet)](https://unity3d.com)
+
+[![openupm](https://img.shields.io/npm/v/com.ltmx.unity.package-manager.tools?label=openupm&style=for-the-badge&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.ltmx.mathematics.mathx)
+
+
 
 Enhance your Unity editor experience with the Unity Package Registry Tools, a versatile editor tool designed to seamlessly manage scoped registries in your Unity projects. This powerful editor extension lets you easily add, remove, and manage scoped registries directly from the Unity Editor, providing a streamlined workflow for handling package sources in your `manifest.json` file.
 
