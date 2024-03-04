@@ -1,6 +1,7 @@
 # Unity Package Manager Tools
 
-![Scoped Registry Editor Effect](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
+![LTMX Unity Package Manager Tools Banner Thin](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/3677b97d-2bea-44ff-8bb6-7aee4f27ada2)
+
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/LTMX/Unity.PackageManagerTools?color=blueviolet&style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/LTMX/Unity.PackageManagerTools?style=for-the-badge)
@@ -18,7 +19,10 @@ Enhance your Unity editor experience with the Unity Package Registry Tools, a ve
 
 - **Predefined Registries**: Comes with a set of predefined scoped registries known for common Unity packages
 - **Custom Registry Management**: Add, modify, and remove custom scoped registries
+- ![Scoped Registry Editor](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
 - **Selective Enable/Disable**: Conveniently enable or disable individual registries
+- README.md/index.md enhanced Description
+- Markdown Rendering
 
 ## Getting Started
 
@@ -109,6 +113,10 @@ Contributions are welcome! If you've identified a bug, have an idea for improvem
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Aknowledgements
+
+The Markdown rendering is made using [UMV](https://github.com/gwaredd/UnityMarkdownViewer) as an embedded package
 
 ---
 
