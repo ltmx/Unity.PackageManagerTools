@@ -119,15 +119,14 @@ namespace UIMarkdownRenderer
                 returnElem = new ScrollView();
                 returnElem.Add(s_StaticRenderer.RootElement);
             }
-            else
-            {
-                returnElem = s_StaticRenderer.RootElement;
-            }
+            else returnElem = s_StaticRenderer.RootElement;
+            
 
             if (s_DefaultStylesheet != null)
                 returnElem.styleSheets.Add(s_DefaultStylesheet);
 
-            foreach (var stylesheet in s_StaticRenderer.m_CustomStylesheets) returnElem.styleSheets.Add(stylesheet);
+            foreach (var stylesheet in s_StaticRenderer.m_CustomStylesheets) 
+                returnElem.styleSheets.Add(stylesheet);
 
             return returnElem;
         }

@@ -37,6 +37,7 @@ public class ScopedRegistryEditor : EditorWindow
         new ("keijiro", "https://registry.npmjs.com", "jp.keijiro"),
         new ("NatML", "https://registry.npmjs.com", new [] { "ai.natml", "ai.fxn" }),
         new ("Roy Theunissen", UpmUrl, "com.roytheunissen"),
+        new ("mob-sakai", UpmUrl, "com.coffee"),
         
         
         // Company registries
