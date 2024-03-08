@@ -60,30 +60,38 @@ namespace UIMarkdownRenderer.ObjectRenderers
                 asyncOp.completed += _ =>
                 {
 
-                    if (link.StartsWith("http"))
+                    try
                     {
-                        imgElem.image = DownloadHandlerTexture.GetContent(uwr);
+                        if (link.StartsWith("http"))
+                        {
+                            imgElem.image = DownloadHandlerTexture.GetContent(uwr);
+                        }
+                        else  {
+                            var tex = new Texture2D(2, 2);
+                            var pth = BetterCombinePaths(renderer.FileFolder, link);
+                            tex.LoadImage(File.ReadAllBytes(pth));
+                            imgElem.image = tex;
+                        }
+
+                        if (imgElem.image == null)
+                        {
+                            // All this is just to prevent empty images from being added to the hierarchy
+                            var parent = imgElem.parent;
+                            var previous = imgElem.parent.ElementAt(imgElem.parent.IndexOf(imgElem) - 1);
+                            parent.Remove(imgElem);
+                            parent.Remove(previous);
+                        }
+                        else
+                        {
+                            imgElem.Fit();
+                            imgElem.RegisterCallback<GeometryChangedEvent>( _ => imgElem.Fit());
+                        }
                     }
-                    else  {
-                        var tex = new Texture2D(2, 2);
-                        var pth = BetterCombinePaths(renderer.FileFolder, link);
-                        tex.LoadImage(File.ReadAllBytes(pth));
-                        imgElem.image = tex;
+                    catch (System.Exception e)
+                    {
+                        // Debug.LogError(e);
                     }
 
-                    if (imgElem.image == null)
-                    {
-                        // All this is just to prevent empty images from being added to the hierarchy
-                        var parent = imgElem.parent;
-                        var previous = imgElem.parent.ElementAt(imgElem.parent.IndexOf(imgElem) - 1);
-                        parent.Remove(imgElem);
-                        parent.Remove(previous);
-                    }
-                    else
-                    {
-                        imgElem.Fit();
-                        imgElem.RegisterCallback<GeometryChangedEvent>( _ => imgElem.Fit());
-                    }
                     uwr.Dispose();
                 };
             }
