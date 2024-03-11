@@ -1,16 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Swan;
 using UnityEditor;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static UIMarkdownRenderer.UIMarkdownRenderer;
 using Debug = UnityEngine.Debug;
