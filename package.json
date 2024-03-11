@@ -11,8 +11,7 @@
   "unity": "2021.3",
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "2.0.0",
-    "com.unity.ugui": "1.0.0",
-    "com.coffee.upm-git-extensions" : "https://github.com/mob-sakai/UpmGitExtension.git"
+    "com.unity.ugui": "1.0.0"
   },
   "keywords": [
     "unity",
