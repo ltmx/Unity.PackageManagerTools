@@ -17,12 +17,18 @@ Enhance your Unity editor experience with the Unity Package Registry Tools, a ve
 
 ## Features
 
+- #### Enhanced Description *fetched from Documentation files*
+- #### Markdown Rendering
+- #### Emoji Support
+    > ![image](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/71953d0c-9985-427a-bef0-b29c986793c5)
+
 - **Predefined Registries**: Comes with a set of predefined scoped registries known for common Unity packages
-- **Custom Registry Management**: Add, modify, and remove custom scoped registries
-- ![Scoped Registry Editor](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
-- **Selective Enable/Disable**: Conveniently enable or disable individual registries
-- README.md/index.md enhanced Description
-- Markdown Rendering
+- #### **Custom Registry Management**: *Add, modify, and remove custom scoped registries*
+    > ![Scoped Registry Editor](https://github.com/ltmx/Unity.PackageManagerTools/assets/47640688/55393bf6-0efa-4290-adc6-c7605c4d2cc6)
+- **Selective Enable/Disable**: *Conveniently enable or disable individual registries*
+
+
+
 
 ## Getting Started
 
