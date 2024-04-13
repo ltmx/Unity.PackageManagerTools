@@ -7,7 +7,7 @@
   "name": "com.ltmx.unity.package-manager.tools",
   "displayName": "Package Manager Tools",
   "description": "Easily Edit your Package Manager's Scoped Registries",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "unity": "2021.3",
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "2.0.0",
