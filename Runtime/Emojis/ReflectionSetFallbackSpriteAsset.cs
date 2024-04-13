@@ -5,7 +5,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
+#if UNITY_EDITOR
 [InitializeOnLoad]
+#endif
 public static class SetCustomFallbackSpriteAsset
 {
     public static TextStyleSheet styleSheet;
@@ -16,7 +18,9 @@ public static class SetCustomFallbackSpriteAsset
         Debug.Log("Custom fallback sprite asset set successfully.");
     }
 
+    #if UNITY_EDITOR
     [MenuItem("Tools/Package Manager/Set Custom Emoji Asset")]
+    #endif
     public static void SetCustomEmojiAsset()
     {
         ModifyStaticTextGenerationSettings(Resources.Load<SpriteAsset>("Sprite Assets/emoji_sheet"));
