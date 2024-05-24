@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
@@ -22,6 +21,8 @@ public class ScopedRegistryEditor : EditorWindow
         // Author's registry
         new ("ltmx", UpmUrl, "com.ltmx"),
         
+        new("glitchenzo", UpmUrl, "com.github-glitchenzo"),
+            
         // A curated list of Unity packages
         new ("UnityNuGet", "https://unitynuget-registry.azurewebsites.net", "org.nuget"),
         
@@ -38,6 +39,7 @@ public class ScopedRegistryEditor : EditorWindow
         new ("NatML", "https://registry.npmjs.com", new [] { "ai.natml", "ai.fxn" }),
         new ("Roy Theunissen", UpmUrl, "com.roytheunissen"),
         new ("mob-sakai", UpmUrl, "com.coffee"),
+        
         
         
         // Company registries
