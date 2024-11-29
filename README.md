@@ -4,7 +4,6 @@
 
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ltmx/Unity.PackageManagerTools?color=blueviolet)
-![GitHub repo size](https://img.shields.io/github/repo-size/ltmx/Unity.PackageManagerTools)
 ![GitHub top language](https://img.shields.io/github/languages/top/ltmx/Unity.PackageManagerTools?color=success)
 ![GitHub](https://img.shields.io/github/license/ltmx/Unity.PackageManagerTools)
 [![Made for Unity](https://img.shields.io/badge/Made%20for-Unity-57b9d3.svg?logo=unity&color=blueviolet)](https://unity3d.com)
