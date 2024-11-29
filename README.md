@@ -9,7 +9,7 @@
 ![GitHub](https://img.shields.io/github/license/LTMX/Unity.PackageManagerTools?style=for-the-badge)
 [![Made for Unity](https://img.shields.io/badge/Made%20for-Unity-57b9d3.svg?style=for-the-badge&logo=unity&color=blueviolet)](https://unity3d.com)
 
-[![openupm](https://img.shields.io/npm/v/com.ltmx.unity.package-manager.tools?label=openupm&style=for-the-badge&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.ltmx.mathematics.mathx)
+[![openupm](https://img.shields.io/npm/v/com.ltmx.unity.package-manager.tools?label=openupm&style=for-the-badge&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.ltmx.package-manager.tools)
 
 
 
