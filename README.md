@@ -6,7 +6,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ltmx/Unity.PackageManagerTools?color=blueviolet)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ltmx/Unity.PackageManagerTools)
 ![GitHub top language](https://img.shields.io/github/languages/top/ltmx/Unity.PackageManagerTools?color=success)
-![GitHub](https://img.shields.io/github/license/ltmx/Unity.PackageManagerTools?&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/ltmx/Unity.PackageManagerTools)
 [![Made for Unity](https://img.shields.io/badge/Made%20for-Unity-57b9d3.svg?logo=unity&color=blueviolet)](https://unity3d.com)
 
 [![openupm](https://img.shields.io/npm/v/com.ltmx.unity.package-manager.tools?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.ltmx.package-manager.tools)
